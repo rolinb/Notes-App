@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShortNotes</string>
+    <string name="math">Math</string>
+    <string name="astronomy">Astronomy</string>
+</resources>
