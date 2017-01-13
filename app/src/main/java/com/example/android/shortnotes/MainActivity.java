@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.view.View.OnClickListener;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         TextView astronomy = (TextView) findViewById(R.id.astronomy);
 
-        astronomy.setOnClickListener(new View.OnClickListener(){
+        astronomy.setOnClickListener(new OnClickListener(){
             @Override
             public void onClick(View view){
                 Intent astroIntent = new Intent(MainActivity.this, AstroActivity.class);
