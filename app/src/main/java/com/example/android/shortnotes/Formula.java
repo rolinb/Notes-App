@@ -5,14 +5,19 @@ package com.example.android.shortnotes;
  */
 
 public class Formula {
-    private String integral;
-    private String defaultFormula;
-    private String derivative;
+    private String integral = null;
+    private String defaultFormula= null;
+    private int imageOne = -1;
+    private int imageTwo = -1;
 
-    public Formula(String integral, String defaultFormula, String derivative){
+    public Formula(String integral, String defaultFormula){
         this.integral = integral;
         this.defaultFormula = defaultFormula;
-        this.derivative = derivative;
+    }
+
+    public Formula(int itemOne, int itemTwo){
+        imageOne = itemOne;
+        imageTwo = itemTwo;
     }
 
     public String getDefaultFormula() {
@@ -23,7 +28,16 @@ public class Formula {
         return integral;
     }
 
-    public String getDerivative() {
-        return derivative;
+    public int getImageOne(){
+        return imageOne;
     }
+
+    public int getImageTwo(){
+        return imageTwo;
+    }
+
+    public boolean hasImages(){
+        return (imageOne != -1);
+    }
+
 }

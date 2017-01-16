@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/mathTextItems"
+            android:background="@android:color/holo_green_light"
+            android:id="@+id/col_one_two_item"
+            tools:text="one"/>
+        <TextView
+            style="@style/mathTextItems"
+            android:background="@android:color/holo_blue_dark"
+            android:id="@+id/col_two_two_item"
+            tools:text="two"/>
+        <ImageView
+            style="@style/mathImageItems"
+            android:id="@+id/col_one_image_two_item"/>
+        <ImageView
+            style="@style/mathImageItems"
+            android:id="@+id/col_two_image_two_item"/>
+
+    </LinearLayout>
+
+</LinearLayout>

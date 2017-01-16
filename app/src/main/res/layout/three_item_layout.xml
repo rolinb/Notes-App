@@ -4,22 +4,22 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            style="@style/mathItems"
+            style="@style/mathTextItems"
             android:background="@android:color/holo_green_light"
             android:id="@+id/integral"
             tools:text="one"/>
         <TextView
-            style="@style/mathItems"
+            style="@style/mathTextItems"
             android:background="@android:color/holo_blue_dark"
             android:id="@+id/defaultValue"
             tools:text="two"/>
         <TextView
-            style="@style/mathItems"
+            style="@style/mathTextItems"
             android:background="@android:color/holo_blue_light"
             android:id="@+id/derivative"
             tools:text="three"/>

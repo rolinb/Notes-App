@@ -22,11 +22,9 @@ public class MathActivity extends AppCompatActivity {
         ArrayList<Formula> formulae = new ArrayList<Formula>();
 
 
-        formulae.add(new Formula("one Integral", "Tan(x)", "sec^2x"));
-        formulae.add(new Formula("two Integral", "two default value", "two derivative"));
-        formulae.add(new Formula("two Integral", "two default value", "two derivative"));
-        formulae.add(new Formula("two Integral", "two default value", "two derivative"));
-        formulae.add(new Formula("two Integral", "two default value", "two derivative"));
+        formulae.add(new Formula("Equation", "Derivative"));
+        formulae.add(new Formula(R.drawable.tan, R.drawable.ddxtan));
+
 
 
 

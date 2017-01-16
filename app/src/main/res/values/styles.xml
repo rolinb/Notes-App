@@ -18,10 +18,20 @@
         <item name="android:textAppearance">?android:textAppearanceMedium</item>
     </style>
 
-    <style name="mathItems">
+    <style name="mathTextItems">
         <item name="android:layout_width">2dp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:minHeight">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="mathImageItems">
+        <item name="android:layout_width">2dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:padding">20dp</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 </resources>

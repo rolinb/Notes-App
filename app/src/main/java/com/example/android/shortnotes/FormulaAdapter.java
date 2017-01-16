@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -19,23 +20,40 @@ public class FormulaAdapter extends ArrayAdapter<Formula> {
         View listItemView = convertView;
 
         if(listItemView == null){
-            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.math_item, parent, false);
+            listItemView = LayoutInflater.from(getContext()).inflate(R.layout.two_item_layout, parent, false);
         }
+
 
         Formula currentFormula = getItem(position);
 
-        TextView integralTextView = (TextView) listItemView.findViewById(R.id.integral);
+        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.col_one_two_item);
 
-        integralTextView.setText(currentFormula.getIntegral());
+        TextView derivativeTextView = (TextView) listItemView.findViewById(R.id.col_two_two_item);
 
-        TextView defaultTextView = (TextView) listItemView.findViewById(R.id.defaultValue);
+        ImageView defaultImageView = (ImageView) listItemView.findViewById(R.id.col_one_image_two_item);
 
-        defaultTextView.setText(currentFormula.getDefaultFormula());
+        ImageView derivativeImageVIew = (ImageView) listItemView.findViewById(R.id.col_two_image_two_item);
 
-        TextView derivativeTextView = (TextView) listItemView.findViewById(R.id.derivative);
+        if(!currentFormula.hasImages()) {
 
-        derivativeTextView.setText(currentFormula.getDerivative());
-        //derivativeTextView.setText("test");
+            defaultTextView.setText(currentFormula.getIntegral());
+
+            derivativeTextView.setText(currentFormula.getDefaultFormula());
+
+            defaultImageView.setVisibility(View.GONE);
+
+            derivativeImageVIew.setVisibility(View.GONE);
+
+        }
+        else {
+
+            defaultImageView.setImageResource(currentFormula.getImageOne());
+            defaultImageView.setVisibility(View.VISIBLE);
+            derivativeImageVIew.setImageResource(currentFormula.getImageTwo());
+            derivativeImageVIew.setVisibility(View.VISIBLE);
+            defaultTextView.setVisibility(View.GONE);
+            derivativeTextView.setVisibility(View.GONE);
+        }
 
 
 
